@@ -5,7 +5,7 @@
    },
   "browser_action": {
      "default_icon": "images/zhongwen48.png",
-     "default_title": "Zhongwen Chinesisch-Deutsch Popup Woerterbuch",
+     "default_title": "Zhongwen Chinesisch-Deutsch Popup Worterbuch",
      "browser_style": true
   },
    "content_scripts": [ {
@@ -22,7 +22,7 @@
    },
    "homepage_url": "https://github.com/CNurt/zhongwen/tree/german",
    "manifest_version": 2,
-   "name": "Zhongwen: Chinesisch-Deutsch Popup Woerterbuch",
+   "name": "Zhongwen: Chinesisch-Deutsch Popup Worterbuch",
    "options_ui": {
      "page": "options.html",
      "browser_style": true,
