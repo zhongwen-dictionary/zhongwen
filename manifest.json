@@ -34,7 +34,7 @@
   "web_accessible_resources": [ "css/*", "js/*", "images/*" ],
   "applications": {
     "gecko": {
-      "id": "{00000000-0000-0000-0000-000000000000}", //I have no idea but it doesn't work without any id
+      "id": "{b65c7bc6-846b-4f65-b6ed-099d7e042309}",
       "strict_min_version": "55.0"
     }
   }
