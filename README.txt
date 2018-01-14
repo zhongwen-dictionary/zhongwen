@@ -2,6 +2,10 @@ Zhongwen - A Chinese Popup Dictionary
 
 Copyright (C) 2010-2018 Christian Schiller
 
+ --- Chinese-German
+ --- This is a fork! The only difference is the replacement of the dictionary files with a German one and the changed name.
+ --- All above and following is still is the original information from the former Chinese-English Version!
+
 https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde
 
 https://addons.mozilla.org/en-US/firefox/addon/zhongwen-chinese-english/
