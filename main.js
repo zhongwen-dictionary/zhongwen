@@ -4,6 +4,8 @@
         https://chrome.google.com/extensions/detail/kkmlkkjojmombglmlpbpapmhcaljjkde
         Modified work Copyright (C) 2017 Leonard Lausen
         https://github.com/leezu/zhongwen
+		Modified (again) work 2018 Curt Seeling
+		https://github.com/CNurt/zhongwen/tree/german
 
         ---
 
