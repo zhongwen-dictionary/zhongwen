@@ -1,4 +1,7 @@
 # Change Log
+## 4.12.1
+- Replaced English dictionary file with Germand dictionary files and renamed it from "Zhongwen Chinese Popup Dictionary" to "Zhongwen Chinesisch-Deutsch Popup Wörterbuch"
+
 ## 4.11.5
 - Really fix for addon activation on tab change / new tabs
 
