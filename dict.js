@@ -47,10 +47,10 @@
 */
 async function loadDictData() {
   let wordDict = fetch(browser.extension.getURL(
-    "data/cedict_ts.u8")).then(
+    "data/handedict.u8")).then(
     processText);
   let wordIndex = fetch(browser.extension.getURL(
-    "data/cedict.idx")).then(
+    "data/handedict.idx")).then(
     processText);
   let grammarKeywords = fetch(browser.extension.getURL(
     "data/grammarKeywordsMin.json")).then(processJson);
