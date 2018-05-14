@@ -92,7 +92,7 @@ browser.browserAction.onClicked.addListener(zhongwenMain.enableToggle)
 browser.tabs.onActivated.addListener(zhongwenMain.onTabActivated)
 browser.tabs.onUpdated.addListener(zhongwenMain.onTabUpdated)
 
-let enabledPromise = browser.storage.local.get({enabled: 0})
+let enabledPromise = browser.storage.local.get({enabled: 0}) //this is only used after re-/start of browser or extension
 Promise.all([enabledPromise]).then(([storage]) => {
     var tab // Can't retrieve tab object in background script
     if (storage.enabled === 1) {
@@ -107,9 +107,16 @@ Promise.all([enabledPromise]).then(([storage]) => {
     }
 })
 
-browser.contextMenus.create({
-    title: 'Open word list',
+browser.contextMenus.create({ // top icon
+    title: 'word list',
     id: 'wordlist-browser_action',
     onclick: zhongwenMain.wordlistTab,
+    contexts: ['browser_action']
+})
+
+browser.contextMenus.create({ // top icon
+    title: 'options',
+    id: 'options-browser_action',
+    onclick: zhongwenMain.optionsTab,
     contexts: ['browser_action']
 })

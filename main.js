@@ -136,12 +136,12 @@ var zhongwenMain = {
           'text': 'On'
         })
 
-        browser.contextMenus.create({
-          title: 'Open word list',
+        /*browser.contextMenus.create({ // page context menu
+          title: 'word list',
           id: 'wordlist-page',
           onclick: zhongwenMain.wordlistTab,
-          contexts: ['page']
-        })
+          contexts: ['browser_action']//'page']
+        })*/
       })
   },
 
@@ -226,6 +226,30 @@ var zhongwenMain = {
     } else {
       browser.tabs.create({ url: url }, function(tab) {
         zhongwenMain.tabIDs['wordlist'] = tab.id;
+        browser.tabs.reload(tab.id); });
+    }
+  },
+
+  optionsTab: function() {
+    var url = browser.extension.getURL("/options.html");
+    var tabID = zhongwenMain.tabIDs['options'];
+    if (tabID) {
+      browser.tabs.get(tabID, function(tab) {
+        if (tab && (tab.url.substr(-13) == 'options.html')) {
+          browser.tabs.reload(tabID);
+          browser.tabs.update(tabID, {active: true});
+        } else {
+          browser.tabs.create({
+            url: url
+          }, function(tab) {
+            zhongwenMain.tabIDs['options'] = tab.id;
+            browser.tabs.reload(tab.id);
+          });
+        }
+      });
+    } else {
+      browser.tabs.create({ url: url }, function(tab) {
+        zhongwenMain.tabIDs['options'] = tab.id;
         browser.tabs.reload(tab.id); });
     }
   }

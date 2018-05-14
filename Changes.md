@@ -1,6 +1,6 @@
 # Change Log
 ## 4.12.1
-- Replaced English dictionary file with Germand dictionary files and renamed it from "Zhongwen Chinese Popup Dictionary" to "Zhongwen Chinesisch-Deutsch Popup WÃ¶rterbuch"
+- Replaced English dictionary file with German dictionary file and renamed it from "Zhongwen Chinese Popup Dictionary" to "Zhongwen Chinesisch-Deutsch Popup Wörterbuch"
   The German dictionary used is from:
     Zhongwen: Chinesisch-Deutsch Popup-Dictionary
     https://chrome.google.com/webstore/detail/zhongwen-chinesisch-deuts/jjkbnbgakjgfiajfkifdbhbfmjgmddeh?utm_source=chrome-app-launcher-info-dialog

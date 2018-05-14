@@ -5,7 +5,7 @@
    },
   "browser_action": {
      "default_icon": "images/zhongwen48.png",
-     "default_title": "Zhongwen Chinesisch-Deutsch Popup Worterbuch",
+     "default_title": "Zhongwen Chinesisch-Deutsch Popup Wörterbuch",
      "browser_style": true
   },
    "content_scripts": [ {
@@ -22,7 +22,7 @@
    },
    "homepage_url": "https://github.com/CNurt/zhongwen/tree/german",
    "manifest_version": 2,
-   "name": "Zhongwen: Chinesisch-Deutsch Popup Worterbuch",
+   "name": "Zhongwen: Chinesisch-Deutsch Popup Wörterbuch",
    "options_ui": {
      "page": "options.html",
      "browser_style": true,
@@ -34,7 +34,7 @@
   "web_accessible_resources": [ "css/*", "js/*", "images/*" ],
   "applications": {
     "gecko": {
-      "id": "{b65c7bc6-846b-4f65-b6ed-099d7e042309}",
+      "id": "{b65c7bc6-846b-4f65-b6ed-099d7e042308}",
       "strict_min_version": "55.0"
     }
   }
