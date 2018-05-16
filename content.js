@@ -277,9 +277,7 @@ var zhongwenContent = {
         }
 
         if (!this.isVisible()) {
-            if (window.getSelection() && !(window.getSelection().toString().length > 0)) {
-                return;
-            }
+            return;
         }
 
         var i;
@@ -753,7 +751,10 @@ var zhongwenContent = {
         var text;
         if (input.value) {
             text = input.value;
-        }  else {
+        } else if (input.nodeName == 'IFRAME') {
+            // gmail
+            text = $(input.contentDocument).find('body').html();
+        } else {
             text = '';
         }
         div.textContent = text;
@@ -1549,10 +1550,6 @@ var zhongwenContent = {
     miniHelp:
     '<span style="font-weight: bold;">Zhongwen Chinese-English Dictionary&nbsp;&nbsp;&nbsp;</span><br><br>' +
     '<p>' +
-    '<span style="font-style: italic; font-weight: bold;">New: </span>' +
-    '<span style="font-style: italic;">In order to make Zhongwen work in input fields and text areas,<br>' +
-    ' hold down the Alt-key on your keyboard.</span><br><br>' +
-    '<p>' +
     'Keyboard shortcuts:' +
     '<p>' +
     '<table style="margin: 20px;" cellspacing=5 cellpadding=5>' +
@@ -1570,6 +1567,7 @@ var zhongwenContent = {
     '<tr><td><b>&nbsp;</b></td><td>&nbsp;</td></tr>' +
     '<tr><td><b>R&nbsp;:</b></td><td>&nbsp;Remember word by adding it to the internal word list</td></tr>' +
     '<tr><td><b>Alt + W&nbsp;:</b></td><td>&nbsp;Show the word list</td></tr>' +
+    '<tr><td><b>Alt + Z&nbsp;:</b></td><td>&nbsp;Toggle Zhongwen on/off</td></tr>' +
     '<tr><td><b>&nbsp;</b></td><td>&nbsp;</td></tr>' +
     '<tr><td colspan=2>Look up selected text in online resource:</td></tr>' +
     '<tr><td><b>&nbsp;</b></td><td>&nbsp;</td></tr>' +
