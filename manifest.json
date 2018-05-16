@@ -29,13 +29,22 @@
      "chrome_style": true
    },
   "permissions": [ "*://*/*", "contextMenus", "storage", "downloads"],
-   "short_name": "Zhongwen Dewen",
-  "version": "4.12.1",
+   "short_name": "Zhongwen dewen",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "4.15",
   "web_accessible_resources": [ "css/*", "js/*", "images/*" ],
   "applications": {
     "gecko": {
       "id": "{b65c7bc6-846b-4f65-b6ed-099d7e042308}",
       "strict_min_version": "55.0"
+    }
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+Z"
+      },
+      "description": "Toggle Zhongwen on/off"
     }
   }
 }

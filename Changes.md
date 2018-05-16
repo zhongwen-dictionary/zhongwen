@@ -1,9 +1,25 @@
 # Change Log
-## 4.12.1
-- Replaced English dictionary file with German dictionary file and renamed it from "Zhongwen Chinese Popup Dictionary" to "Zhongwen Chinesisch-Deutsch Popup Wörterbuch"
+
+##
+- Replaced English dictionary file with German dictionary file and renamed it from "Zhongwen Chinese Popup Dictionary" to "Zhongwen Chinesisch-Deutsch Popup Wï¿½rterbuch"
   The German dictionary used is from:
     Zhongwen: Chinesisch-Deutsch Popup-Dictionary
     https://chrome.google.com/webstore/detail/zhongwen-chinesisch-deuts/jjkbnbgakjgfiajfkifdbhbfmjgmddeh?utm_source=chrome-app-launcher-info-dialog
+
+## 4.14.2
+- Option to toggle Zhongwen via keyboard shortcut
+
+## 4.14.1
+- Fix unwanted keypress interception by Zhongwen in rare cases (#10)
+
+## 4.14
+- Update CC-CEDICT dictionary
+
+## 4.13
+- Update CC-CEDICT dictionary
+
+## 4.12
+- Update CC-CEDICT dictionary
 
 ## 4.11.5
 - Really fix for addon activation on tab change / new tabs
