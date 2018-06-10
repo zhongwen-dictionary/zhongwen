@@ -138,12 +138,12 @@ var zhongwenMain = {
           'text': 'On'
         })
 
-        /*browser.contextMenus.create({ // page context menu
-          title: 'word list',
+        browser.contextMenus.create({
+          title: 'Open word list',
           id: 'wordlist-page',
           onclick: zhongwenMain.wordlistTab,
-          contexts: ['browser_action']//'page']
-        })*/
+          contexts: ['page']
+        })
       })
   },
 

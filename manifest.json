@@ -1,5 +1,5 @@
 {
-   "author": "Christian Schiller, Leonard Lausen, (Curt Seeling)",
+   "author": "Christian Schiller, Leonard Lausen",
    "background": {
       "scripts": [ "dict.js", "main.js", "background.js" ]
    },
