@@ -13,7 +13,7 @@ function restoreOptions() {
       'tonecolors': "yes",
       'fontSize': "small",
       'skritterTLD': "com",
-      'zhuyin': "no",
+      'translit': "pinyin",
       'grammar': "yes"
     }
   });
@@ -45,10 +45,14 @@ function restoreOptions() {
       document.optform.skritterTLD[0].selected = true;
     }
 
-    if (options.zhuyin == 'yes') {
-      document.optform.zhuyin[1].selected = true;
+    if (options.translit == 'zhuyin') {
+      document.optform.translit[1].selected = true;
+    } else if (options.translit == 'pinyin') {
+      document.optform.translit[2].selected = true;
+    } else if (options.translit == 'zhuyin_pinyin') {
+      document.optform.translit[3].selected = true;
     } else {
-      document.optform.zhuyin[0].selected = true;
+      document.optform.translit[0].selected = true;
     }
 
     if (options.grammar == 'no') {
@@ -65,7 +69,7 @@ function saveOptions() {
     'tonecolors': document.optform.tonecolors.value,
     'fontSize': document.optform.fontSize.value,
     'skritterTLD': document.optform.skritterTLD.value,
-    'zhuyin': document.optform.zhuyin.value,
+    'translit': document.optform.translit.value,
     'grammar': document.optform.grammar.value
   };
   let setting = browser.storage.sync.set({

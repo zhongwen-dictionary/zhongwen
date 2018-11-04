@@ -967,20 +967,24 @@ var zhongwenContent = {
                 fragment.appendChild(hanziSpan2);
             }
 
-            // Pinyin
+            // Pinyin and Zhuyin
 
-            var pinyinClass = 'w-pinyin';
-            if (window.zhongwen.config.fontSize == 'small') {
-                pinyinClass += '-small';
-            }
-            var p = this.pinyinAndZhuyin(e[3], showToneColors, pinyinClass);
-            fragment.appendChild(p[0]);
+            if (window.zhongwen.config.translit != 'none') {
+                var pinyinClass = 'w-pinyin';
+                if (window.zhongwen.config.fontSize == 'small') {
+                    pinyinClass += '-small';
+                }
+                var p = this.pinyinAndZhuyin(e[3], showToneColors, pinyinClass);
+                if (window.zhongwen.config.translit.includes('pinyin')) {
+                    fragment.appendChild(p[0]);
+                }
 
-            // Zhuyin
-
-            if (window.zhongwen.config.zhuyin == 'yes') {
-                fragment.appendChild(document.createElement('br'));
-                fragment.appendChild(p[2]);
+                if (window.zhongwen.config.translit.includes('zhuyin')) {
+                    if (window.zhongwen.config.translit.includes('pinyin')) {
+                        fragment.appendChild(document.createElement('br'));
+                    }
+                    fragment.appendChild(p[2]);
+                }
             }
 
             // Definition

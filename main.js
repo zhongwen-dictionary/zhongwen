@@ -79,7 +79,7 @@ var zhongwenMain = {
                         'tonecolors': "yes",
                         'fontSize': "small",
                         'skritterTLD': "com",
-                        'zhuyin': "no",
+                        'translit': "pinyin",
                         'grammar': "yes"
                     }
                 });
@@ -100,7 +100,7 @@ var zhongwenMain = {
         'tonecolors': 'yes',
         'fontSize': 'small',
         'skritterTLD': 'com',
-        'zhuyin': 'no',
+        'translit': 'pinyin',
         'grammar': 'yes'
       }
     })
