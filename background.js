@@ -7,11 +7,6 @@
 
 browser.runtime.onMessage.addListener(function(request, sender, response) {
     switch(request.type) {
-        case 'enable?':
-            // When a page first loads, checks to see if it should enable script
-            zhongwenMain.onTabSelect(sender.tab.id);
-            break;
-
         case 'search':
             var e = zhongwenMain.search(request.text);
             return Promise.resolve(e);
@@ -111,12 +106,5 @@ browser.contextMenus.create({
     title: 'Open word list',
     id: 'wordlist-browser_action',
     onclick: zhongwenMain.wordlistTab,
-    contexts: ['browser_action']
-})
-
-browser.contextMenus.create({
-    title: 'options',
-    id: 'options-browser_action',
-    onclick: zhongwenMain.optionsTab,
     contexts: ['browser_action']
 })

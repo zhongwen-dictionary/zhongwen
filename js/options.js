@@ -73,6 +73,7 @@ function saveOptions() {
   });
 }
 
-document.addEventListener('DOMContentLoaded',restoreOptions);
-//document.querySelector("form").addEventListener("submit",saveOptions);
-document.querySelector("form").addEventListener("change",saveOptions);
+document.addEventListener('DOMContentLoaded',
+  restoreOptions);
+document.querySelector("form").addEventListener("submit",
+  saveOptions);
