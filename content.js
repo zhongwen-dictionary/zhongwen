@@ -50,7 +50,7 @@ var zhongwenContent = {
 
     altView: 0,
 
-    lastFound: null,
+    lastFound: '',
 
     keysDown: [],
 
@@ -941,7 +941,9 @@ var zhongwenContent = {
 
     makeFragment: function(entry, showToneColors) {
         var e;
+        var word;
         var texts = [];
+        var hanziClass;
         var fragment = document.createDocumentFragment();
 
       if (entry == null) return fragment;
@@ -952,19 +954,36 @@ var zhongwenContent = {
 
             // Hanzi
 
-            var hanziClass = 'w-hanzi';
-            if (window.zhongwen.config.fontSize == 'small') {
-                hanziClass += '-small';
-            }
-            var hanziSpan = document.createElement('span');
-            hanziSpan.textContent = e[2];
-            hanziSpan.className = hanziClass;
-            fragment.appendChild(hanziSpan);
-            if (e[1] != e[2]) {
-                var hanziSpan2 = document.createElement('span');
-                hanziSpan2.textContent = e[1];
-                hanziSpan2.className = hanziClass;
-                fragment.appendChild(hanziSpan2);
+            if (window.zhongwen.config.simpTrad == 'auto') {
+
+                word = entry.data[i][1];
+
+                hanziClass = 'w-hanzi';
+                if (window.zhongwen.config.fontSize == 'small') {
+                    hanziClass += '-small';
+                }
+                var hanziSpan = document.createElement('span');
+                hanziSpan.textContent = e[2];
+                hanziSpan.className = hanziClass;
+                fragment.appendChild(hanziSpan);
+
+            } else {
+
+                hanziClass = 'w-hanzi';
+                if (window.zhongwen.config.fontSize == 'small') {
+                    hanziClass += '-small';
+                }
+                var hanziSpan = document.createElement('span');
+                hanziSpan.textContent = e[2];
+                hanziSpan.className = hanziClass;
+                fragment.appendChild(hanziSpan);
+                if (e[1] != e[2]) {
+                    var hanziSpan2 = document.createElement('span');
+                    hanziSpan2.textContent = e[1];
+                    hanziSpan2.className = hanziClass;
+                    fragment.appendChild(hanziSpan2);
+                }
+
             }
 
             // Pinyin and Zhuyin
@@ -1322,11 +1341,11 @@ var zhongwenContent = {
         'long': '\u310c\u3128\u3125',
         'lou': '\u310c\u3121',
         'lu': '\u310c\u3128',
-        'l': '\u310c\u3128\u3122',
+        'lu:': '\u310c\u3129',
         'luan': '\u310c\u3128\u3123',
-        'le': '\u310c\u3128\u311b',
+        'lu:e': '\u310c\u3129\u311d',
         'lun': '\u310c\u3129',
-        'ln': '\u310c\u3129\u311d',
+        'lu:n': '\u310c\u3129\u3123',
         'luo': '\u310c\u3129\u3123',
         'ma': '\u3107\u311a',
         'mai': '\u3107\u311e',
@@ -1368,9 +1387,9 @@ var zhongwenContent = {
         'nong': '\u310b\u3128\u3125',
         'nou': '\u310b\u3121',
         'nu': '\u310b\u3128',
-        'n': '\u310b\u3128\u3122',
+        'nu:': '\u310b\u3129',
         'nuan': '\u310b\u3128\u3123',
-        'ne': '\u310b\u3128\u311b',
+        'nu:e': '\u310b\u3129\u311d',
         'nun': '\u310b\u3129',
         'nuo': '\u310b\u3129\u311d',
         'ou': '\u3121',
